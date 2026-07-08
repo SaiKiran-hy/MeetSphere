@@ -1,0 +1,202 @@
+/* ─────────────────────────────────────────
+   App.css — MeetSphere global styles
+───────────────────────────────────────── */
+
+/* ── Global reset ── */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ── Landing page ── */
+
+.landingPageContainer {
+    width: 100vw;
+    height: 100vh;
+    background: url("/public/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.landingPageContainer nav {
+    padding-inline: 1.2rem;
+    padding-block: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.landingPageContainer nav h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.landingPageContainer nav .navlist {
+    display: flex;
+    gap: 1.6rem;
+    cursor: pointer;
+}
+
+.landingMainContainer {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 3rem;
+    height: 80vh;
+    align-items: center;
+}
+
+.landingMainContainer > div:nth-child(1) {
+    font-size: 2rem;
+}
+
+.landingMainContainer > div:nth-child(1) div[role="button"] {
+    background: #D97500;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 20px;
+    margin-top: 1.9rem;
+}
+
+.landingMainContainer > div:nth-child(1) div[role="button"] a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.landingMainContainer > div:nth-child(2) img {
+    height: 70vh;
+    width: auto;
+}
+
+/* ── Home page — navbar ── */
+
+.navBar {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px;
+    background: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.logoSection {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logoSection h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.navActions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ── Home page — main container ── */
+
+.meetContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 80px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at top left, #EAF2FF, white 35%),
+        radial-gradient(circle at bottom right, #F4EEFF, white 30%);
+}
+
+.leftPanel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.heroSection {
+    max-width: 540px;
+}
+
+.heroTitle {
+    font-size: 3rem !important;
+    font-weight: 800 !important;
+    line-height: 1.15 !important;
+    color: #111827;
+}
+
+.heroSubtitle {
+    margin-top: 25px !important;
+    color: #6B7280;
+    font-size: 1.05rem !important;
+    line-height: 1.75 !important;
+}
+
+.joinCard {
+    margin-top: 45px;
+    background: white;
+    padding: 28px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.joinTitle {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    margin-bottom: 20px !important;
+}
+
+.joinBox {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.rightPanel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightPanel img {
+    width: 520px;
+    max-width: 100%;
+    animation: floatImage 5s ease-in-out infinite;
+}
+
+/* ── Animations ── */
+
+@keyframes floatImage {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-14px); }
+    100% { transform: translateY(0); }
+}
